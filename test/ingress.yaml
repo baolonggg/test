@@ -9,11 +9,32 @@ spec:
   rules:
   - host: baolong.site
     http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: store-front
-                port:
-                  number: 80
+      paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: store-front
+              port:
+                number: 80
+        - pathType: Prefix
+          path: "/order-service"
+          backend:
+            service:
+              name: order-service
+              port:
+                number: 3000
+        - pathType: Prefix
+          path: "/product-service"
+          backend:
+            service:
+              name: product-service
+              port:
+                number: 3002
+        - pathType: Prefix
+          path: "/rabbitmq"
+          backend:
+            service:
+              name: rabbitmq
+              port:
+                number: 15672
