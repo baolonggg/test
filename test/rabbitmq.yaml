@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: rabbitmq
+  namespace: dev
 spec:
   serviceName: rabbitmq
   replicas: 1
@@ -55,12 +56,14 @@ data:
     [rabbitmq_management,rabbitmq_prometheus,rabbitmq_amqp1_0].
 kind: ConfigMap
 metadata:
-  name: rabbitmq-enabled-plugins            
+  name: rabbitmq-enabled-plugins   
+  namespace: dev         
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: rabbitmq
+  namespace: dev
 spec:
   selector:
     app: rabbitmq
