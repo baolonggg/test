@@ -3,17 +3,17 @@ kind: Ingress
 metadata:
   name: microservices-ingress
   namespace: dev
-  annotations:
+  annotations: 
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
   - host: baolong.site
     http:
-      paths:
-      - path: /store
-        pathType: Prefix
-        backend:
-          service:
-            name: store-front
-            port:
-              number: 80
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: store-front
+                port:
+                  number: 80
