@@ -5,7 +5,7 @@ metadata:
   name: store-front
   namespace: dev
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: store-front
