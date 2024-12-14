@@ -54,7 +54,6 @@ metadata:
   name: product-service
   namespace: dev
 spec:
-  type: ClusterIP
   ports:
   - name: http
     port: 3002
