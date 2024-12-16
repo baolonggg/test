@@ -5,7 +5,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: baolongtk1232@gmail.com  # Thay bằng email của bạn
+    email: abc@gmail.com  # Thay bằng email của bạn
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
