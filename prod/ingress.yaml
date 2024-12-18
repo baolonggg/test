@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - baolong.site
-    secretName: baolong-site-tls
+    - lixsong.click
+    secretName: lixsong-click-tls
   rules:
-  - host: baolong.site
+  - host: lixsong.click
     http:
       paths:
         - pathType: Prefix
