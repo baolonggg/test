@@ -43,3 +43,17 @@ spec:
               name: rabbitmq
               port:
                 number: 15672
+        - pathType: Prefix
+          path: "/prometheus"
+          backend:
+            service:
+              name: prometheus
+              port:
+                number: 9090
+        - pathType: Prefix
+          path: "/grafana"
+          backend:
+            service:
+              name: grafana
+              port:
+                number: 80
